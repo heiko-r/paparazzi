@@ -151,6 +151,22 @@
 #define MOTOR_MIXING_YAW_COEF    { -MOTOR_YAW_SIGN*128,  MOTOR_YAW_SIGN*128, -MOTOR_YAW_SIGN*128,  MOTOR_YAW_SIGN*128, -MOTOR_YAW_SIGN*128,  MOTOR_YAW_SIGN*128, -MOTOR_YAW_SIGN*128,  MOTOR_YAW_SIGN*128 }
 #define MOTOR_MIXING_THRUST_COEF {  256,  256,  256,  256,  256,  256,  256,  256 }
 
+#elif MOTOR_MIXING_TYPE == TRICOPTER
+/*
+ * Tricopter with motor order:
+ * front right (CW), front left (CCW), back (CCW)
+ */
+#define MOTOR_FRONT_RIGHT 0
+#define MOTOR_FRONT_LEFT 1
+#define MOTOR_BACK  2
+#define MOTOR_MIXING_NB_MOTOR    3
+#define MOTOR_MIXING_SCALE       256
+#define MOTOR_MIXING_ROLL_COEF   { -256,  256,    0}
+#define MOTOR_MIXING_PITCH_COEF  {  128,  128, -256}
+#define MOTOR_MIXING_YAW_COEF    {    0,    0,    0}
+#define MOTOR_MIXING_THRUST_COEF {  256,  256,  256}
+
+
 #endif
 
 #endif /* MOTOR_MIXING_TYPES_H */
