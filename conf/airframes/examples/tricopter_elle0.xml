@@ -28,7 +28,7 @@
 
     <subsystem name="telemetry"     type="transparent"/> <!-- default: 57600 baud --> 
     <subsystem name="imu"           type="elle0"/>
-    <subsystem name="gps"           type="ublox"/>
+    <module name="gps"           type="ublox"/>
     <subsystem name="stabilization" type="int_quat"/>
     <subsystem name="ahrs"          type="float_mlkf">
 	    <!-- Uncomment to enable all axis update from the Magnetometer. Do
