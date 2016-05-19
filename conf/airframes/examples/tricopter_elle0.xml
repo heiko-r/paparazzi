@@ -148,7 +148,7 @@
     <define name="SP_MAX_R"       value="90." unit="deg/s"/>
     <define name="DEADBAND_A"     value="0"/>
     <define name="DEADBAND_E"     value="0"/>
-    <define name="DEADBAND_R"     value="250"/>
+    <define name="DEADBAND_R"     value="50"/> <!-- 10 Mai 2016: Von 250 auf 50 reduziert -->
 
     <!-- reference -->
     <define name="REF_OMEGA_P"  value="400" unit="deg/s"/>
