@@ -46,6 +46,10 @@ update_submodules:
 	$(Q)if [ -d $(PAPARAZZI_SRC)/.git ]; then \
 		cd $(PAPARAZZI_SRC) && git submodule update --init sw/ext/$*; \
 	fi
+	
+# update pprzlink submodule to pull in latest upstream changes
+pprzlink.update:
+	cd $(PAPARAZZI_SRC) && git submodule update --remote sw/ext/pprzlink;
 
 # only build currentl checkout of libopencm3
 libopencm3.build:
