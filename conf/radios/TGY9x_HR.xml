@@ -47,7 +47,7 @@
  <channel ctl="1" function="ROLL"        min="1074" neutral="1499" max="1925" average="0"/>
  <channel ctl="2" function="PITCH"       min="1925" neutral="1521" max="1074" average="0"/>
  <channel ctl="3" function="THROTTLE"    min="1080" neutral="1102" max="1918" average="0"/>
- <channel ctl="4" function="YAW"         min="1074" neutral="1500" max="1926" average="0"/>
+ <channel ctl="4" function="YAW"         min="1926" neutral="1500" max="1074" average="0"/>
  <channel ctl="5" function="MODE"        min="1073" neutral="1476" max="1926" average="1"/>
  <channel ctl="6" function="UNUSED1"     min="1073" neutral="1476" max="1926" average="1"/>
 <!-- <channel ctl="7" function="KILL"        min="1000" neutral="1500" max="2000" average="1"/>

@@ -167,13 +167,13 @@
     <define name="REF_MAX_RDOT" value="RadOfDeg(1800.)"/>
 
     <!-- feedback -->
-    <define name="PHI_PGAIN"  value="500"/>
-    <define name="PHI_DGAIN"  value="200"/>
-    <define name="PHI_IGAIN"  value="200"/>
+    <define name="PHI_PGAIN"  value="400"/>
+    <define name="PHI_DGAIN"  value="250"/>
+    <define name="PHI_IGAIN"  value="200"/> <!-- was 200 -->
 
-    <define name="THETA_PGAIN"  value="500"/>
-    <define name="THETA_DGAIN"  value="200"/>
-    <define name="THETA_IGAIN"  value="200"/>
+    <define name="THETA_PGAIN"  value="400"/>
+    <define name="THETA_DGAIN"  value="250"/>
+    <define name="THETA_IGAIN"  value="200"/> <!-- was 200 -->
 
     <define name="PSI_PGAIN"  value="500"/>
     <define name="PSI_DGAIN"  value="300"/>
@@ -213,7 +213,7 @@
   <section name="AUTOPILOT">
     <define name="MODE_MANUAL" value="AP_MODE_ATTITUDE_DIRECT"/>
     <define name="MODE_AUTO1"  value="AP_MODE_HOVER_Z_HOLD"/>
-    <define name="MODE_AUTO2"  value="AP_MODE_NAV"/>
+    <define name="MODE_AUTO2"  value="AP_MODE_KILL"/>
   </section>
 
   <section name="BAT">
