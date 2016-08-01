@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# This hook adds a file containing the current branch and commit
+# hash of pprzlink into the paparazzi repository, so that we always
+# know which pprzlink commit works with a committed paparazzi version.
+# 
+# The new file will not neccessarily show in the commit overview of
+# the commit message template, but it is added and committed anyway.
+
+PAPARAZZIBRANCH=`git rev-parse --abbrev-ref=strict HEAD`
+if [ "$PAPARAZZIBRANCH" == "ChibiESC_PPRZLink" ]; then
+	HEADREF=$(<../pprzlink/.git/HEAD)
+	REFFILE=${HEADREF:5}
+	BRANCHNAME=`basename ../pprzlink/.git/$REFFILE`
+	COMMITHASH=$(<../pprzlink/.git/$REFFILE)
+	FILENAME=sw/ext/pprzlink_commit
+	
+	rm -f $FILENAME
+	echo "Branch: $BRANCHNAME" >> $FILENAME
+	echo "Commit: $COMMITHASH" >> $FILENAME
+	git add $FILENAME
+else
+	echo "Not on ChibiESC_PPRZLink branch. Skipping pre-commit hook."
+fi

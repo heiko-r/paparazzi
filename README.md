@@ -1,5 +1,16 @@
 # MAIN README
 
+## Repository setup for ChibiESC/pprzlink development
+
+You need to clone [our fork of pprzlink](https://github.com/heiko-r/pprzlink) into a directory next to this repo.
+
+Before committing to this ChibiESC_PPRZLink branch, please install the pre-commit hook: `ln -s ../../pre-commit .git/hooks/pre-commit`
+
+It automatically adds a file containing the current branch and commit hash of the pprzlink repo when committing to this paparazzi branch.
+
+If you want to place your pprzlink clone elsewhere, you need to fix your sw/ext/pprzlink symlink and the above-mentioned pre-commit hook.
+
+
 Paparazzi UAS
 =============
 
