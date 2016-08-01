@@ -48,8 +48,8 @@ update_submodules:
 	fi
 	
 # update pprzlink submodule to pull in latest upstream changes
-pprzlink.update:
-	cd $(PAPARAZZI_SRC) && git submodule update --remote sw/ext/pprzlink;
+pprzlink.update: ;
+#	cd $(PAPARAZZI_SRC) && git submodule update --remote sw/ext/pprzlink;
 
 # only build currentl checkout of libopencm3
 libopencm3.build:
